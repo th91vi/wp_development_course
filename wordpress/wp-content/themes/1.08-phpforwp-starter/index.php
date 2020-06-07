@@ -14,15 +14,22 @@
 
   <div id="content">
 
-    <?php // Start the loop here ?>
+    <?php 
+      if ( have_posts()) : while( have_posts() ) : the_post();
+    ?>
 
       <!-- Display the_title and the_content here -->
+      <h1> <?php the_title(); ?> </h1>
+      <p> <?php the_content(); ?> </p>
 
-    <?php // End while and start else ?>
+<?php endwhile; else: ?>
 
       <!-- Display a 404 message here -->
+      <?php 
+        _e('Desculpe. Não há conteúdo a ser exibido.', 'textdomain')
+      ?>
 
-    <?php // End if ?>
+    <?php endif ?>
 
   </div>
 

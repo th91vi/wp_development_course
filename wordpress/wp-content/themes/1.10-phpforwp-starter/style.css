@@ -12,7 +12,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 
 body {
-  background-color: #B49AEB;
+  background-color: rgb(235, 154, 172);
   font-family: "Open Sans", sans-serif;
 }
 
@@ -49,4 +49,14 @@ pre {
   padding: 20px;
   width: 80%;
   border-radius: 5px;
+}
+
+.meta {
+  display: flex;
+  list-style: none;
+  justify-content: start;
+}
+
+.meta li {
+  margin-left: 1rem;
 }
